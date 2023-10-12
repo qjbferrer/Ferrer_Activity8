@@ -56,6 +56,7 @@
     make install-commandmode
     make install-config
     make install-webconf
+
 - name: Downloading and extracting Nagios plugins
   unarchive:
     src: https://github.com/nagios-plugins/nagios-plugins/archive/release-2.3.3.tar.gz
@@ -75,8 +76,8 @@
 - name: Add a user to a password file and ensure permissions are set
   community.general.htpasswd:
     path: /usr/local/nagios/etc/htpasswd.users
-    name: admin
-    password: admin
+    name: josephferrer
+    password: josephferrer20
 
 - name: Making sure that nagios is started and enabled
   service:
